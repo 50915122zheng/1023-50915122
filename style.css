@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    background-size: cover; /* 使背景圖片覆蓋整個螢幕 */
+    background-position: center; /* 中心對齊背景圖片 */
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #0095DD;
+    margin-bottom: 20px;
+}
+
+canvas {
+    border: 2px solid #0095DD;
+    margin-top: 20px;
+    width: 100%; /* 可以确保画布自适应 */
+    max-width: 800px;
+    max-height: 600px;
+}
+.select-container {
+    display: flex;
+    gap: 10px; /* 控制两个选单之间的间距 */
+    margin: 10px;
+}
+
+
+button, select {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#instructions {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+body.default {
+    background-color: #f0f0f0; /* 默认背景颜色 */
+}
+
+body.night {
+    background-color: #001f3f; /* 夜空背景 */
+    background-image: url('star.jpg'); /* 替换为你的夜空背景图片 */
+    background-size: cover;
+}
+
+body.forest {
+    background-color: #228B22; /* 森林背景 */
+    background-image: url('maxresdefault.jpg'); /* 替换为你的森林背景图片 */
+    background-size: cover;
+}
+body {
+    transition: background-image 0.5s ease; /* 添加過渡效果 */
+}
+
+.default {
+    background-color: #080101; /* 默认背景颜色 */
+}
+
+.night {
+    background-color: #001f3f; /* 夜空背景 */
+    background-image: url('star.jpg'); /* 替换为你的夜空背景图片 */
+    background-size: cover; /* 替換為夜空背景圖片的路徑 */
+}
+
+.forest {
+    background-color: #228B22; /* 森林背景 */
+    background-image: url('maxresdefault.jpg'); /* 替换为你的森林背景图片 */
+    background-size: cover;/* 替換為森林背景圖片的路徑 */
+}
+

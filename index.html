@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打磚塊遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="default">
+    <h1>打磚塊遊戲</h1>
+    
+    <div class="select-container">
+        <label for="difficulty" aria-label="選擇難度">選擇難度：</label>
+        <select id="difficulty">
+            <option value="easy">簡單</option>
+            <option value="medium">中等</option>
+            <option value="hard">困難</option>
+        </select>
+        <audio id="backgroundMusic" loop>
+            <source id="musicSource" src="https://youtu.be/gPpZJlE0Ca8" type="audio/mpeg">
+            
+        </audio>
+        <label for="backgroundTheme" aria-label="選擇背景主題">選擇背景主題：</label>
+        <select id="backgroundTheme">
+            <option value="default">默認</option>
+            <option value="night">夜空</option>
+            <option value="forest">森林</option>
+        </select>
+    </div>
+    
+    <div id="timer">剩余時間: <span id="time">30</span>秒</div>
+    <button id="startGameBtn">開始遊戲</button>
+    
+    <canvas id="gameCanvas" width="480" height="320"></canvas>
+    <button id="extend-paddle-btn">道具:加長擋板</button>
+
+    <div id="instructions">
+        <p>使用左箭頭和右箭頭移動擋板，按上箭頭發射球。</p>
+        <p>擊打磚塊以得分，儘量保持球在螢幕內！</p>
+    </div>
+
+    <div id="gameOver" style="display: none;">
+        <h2>遊戲結束</h2>
+        <p id="finalScore"></p>
+        <button id="restartGameBtn">再玩一次</button>
+    </div>
+    
+    <audio id="backgroundMusic" loop>
+        <source src="500.mp4" type="audio/mpeg">
+    </audio>
+    <audio id="hitSound">
+        <source src="hit1.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
